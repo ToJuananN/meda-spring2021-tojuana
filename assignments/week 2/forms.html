@@ -10,15 +10,36 @@
   <body>
       <h1>Sign up for my Great Service</h1>
 
-    <form>
+    <form action="http://google.com">
         <label for="username">Username:</label>
-        <input id="username" type="text"/>
+        <input id="username" type="email" name=""email/>
         <br />
         <label for="password">Password:</label>
-        <input id="password" type="password"/>
+        <input id="password" type="password" name="password"/>
+    <br />
+    
+    <label>Favorite Food</label>
+     <p><input type="checkbox"  name="food" value="pizza"/> Pizza</p>
+     <p><input type="checkbox" name="food" value="fried chicken" disabled/> Fried Chicken</p>
+     <p><input type="checkbox"  name="food" value="chocolete"/> Chocolete</p>
+
+     <label>Favorite Past-time</label>
+     <p><input type="radio" name="pasttime" value="reading" checked/> Reading</p>
+     <p><input type="radio" name="pasttime" value="jogging"/> Jogging</p>
+     <p><input type="radio" name="pasttime" value="watching videos" /> Watching Videos</p>
+     <p><input type="radio" name="pasttime" value="" /> Other: <input type="text" /></p>
+
+     <label>Favorite Movie Genres</label>
+     <p><input type="radio" name="genre" value="action" checked="checked"/> Action</p>
+     <p><input type="radio" name="genre" value="adventure" /> Adventure</p>
+     <p><input type="radio" name="genre" value="horror"/> Horror</p>
+
+     <input type="submit" />
+      <input type="reset" />
+      <input type="button" value="Do Nothing" />  
+
+
     </form>
-
-
     
     </body>
 
