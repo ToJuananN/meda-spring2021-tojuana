@@ -49,7 +49,7 @@
     }
 
     #submitbutton {
-        background-color: yellow;
+        background-color: tomato;
     }
 
     main article form input {
@@ -68,6 +68,63 @@
         border-style: solid;
         border-radius: 10px;
     }
+    #first-table {
+        border-width: 1px;
+        border-style: dashed;
+        border-color: blue;
+        width: 400px;
+       /* border-collapse: collapse;*/
+        border-spacing: 10px;
+        background-color: lightgrey;
+
+    }
+
+    #first-table tr {
+        /* Comment in CSS border shorthand for
+        border-width, border-style and border-color */
+        border: 1px dotted blue;
+    }
+
+    #first-table td {
+        border: 1px solid green;
+        border-radius: 5px;
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        background-color: white;
+        font-family: 'Courier New', Courier, monospace;
+
+    }
+
+    #username {
+        background-color: white;
+        /*
+        Order of values for margin/padding shothand
+        TOP RIGHT BOTTOM LEFT (Clockwise)
+        TOP/BOTTOM
+        ALL AROUND
+        */
+        margin: 20px 20px 10px 10px;
+        padding: 5px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 20px;
+        color: slategrey;
+        border: slategray 2px solid;
+        border-radius: 8px;
+    }
+
+    #submitbutton {
+        width: 52px;
+        height: 52px;
+        padding: 0;
+        border-radius: 50px;
+        border-color: tomato;
+        border-style: solid;
+        color: white;
+    }
+
+
 </style>
 </head>
 
@@ -110,7 +167,11 @@
                 <figcaption id="special">My friend Deona reading at Gracenter.</figcaption>
             </figure>
 
-            <table>
+            <!--Rules for naming IDs
+            *Don't start with numbers
+            *Don't capitalize the first letter
+            *Don't-->
+            <table id="first-table">
                 <thead>
                     <tr>
                         <td>Column 1</td>
