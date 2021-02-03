@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    
+    <title>Layout One</title>
+
+    <style>
+        body {
+            background-color: lightcoral;
+            margin: 0;
+        }
+
+        div {
+
+        }
+
+        #header {
+            width: 700px;
+            height: 100px;
+            background-color: slategray;
+            margin: 0 auto;
+        }
+        /*auto is used to center block-level elements
+        margin 0 auto will center block-level (container)
+        text-align center (text)*/
+        #main {
+            width: 700px;
+            /* height: 500px; */
+            background-color: white;
+            margin-top: 0;
+            margin-right: auto;
+            margin-bottom: 0;
+            margin-left: auto;
+            overflow: auto;
+            text-align: center;
+        }
+
+        /* use inline-block */
+        #main div {
+            width: 150px;
+            height: 150px;
+            background-color:thistle;
+            margin: 5px;
+            display: inline-block;
+            margin-left: 20px;
+            margin-right: 20px;
+            vertical-align: text-top;
+
+        }
+
+        #footer {
+            width: 700px;
+            height: 200px;
+            background-color: slategray;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            /* margin: 0 auto; */
+            /* width: 350px; */
+            text-align: center;
+            margin-block-start: 0;
+            margin-block-start: 0;
+
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <div id="header">
+        <h1>This is my New Website!</h1>
+    </div>
+    <div id="main">
+        <div>Hello</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>Hello</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div id="footer"></div>
+    
+</body>
+
+
+
+
+</html>
