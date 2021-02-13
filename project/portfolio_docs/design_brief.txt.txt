@@ -1,0 +1,32 @@
+HOME/ABOUT ME
+Background-color: Moccasin
+Header-text: black
+box-background-color: burlywood
+
+My name is ToJuana Newsome and I am an Aspiring Software
+Engineer. Iam switching from my long-time profession as an 
+Executive Assitant to the Tech Industry.
+
+I enjoy the challenge that coding proviedes me. I look
+forward to building app. that will allow me to help
+people in todays fast paced world.
+
+When I'm not self teaching myself to code and networking
+with other students and professional in the Tech Industry
+I enojoy reading. Coding is very challenging and demanding
+so, I love to read to rest my brain. For more information on 
+my love for reading check out The Art of Reading with ToJuana
+
+
+
+
+
+CONTACT
+Background-color: Moccasin
+Header-text: black
+box-background-color: burlywood
+
+PROJECT
+Background-color: Moccasin
+
+
