@@ -5,9 +5,11 @@ box-background-color: burlywood
 
 My name is ToJuana Newsome and I am an Aspiring Software
 Engineer. Iam switching from my long-time profession as an 
-Executive Assitant to the Tech Industry.
+Executive Assitant to the Tech Industry. Although I enjoyed
+the Administrative field I find that the Tech Industry is more
+challenging.
 
-I enjoy the challenge that coding proviedes me. I look
+I enjoy the challenge that coding provides me. I look
 forward to building app. that will allow me to help
 people in todays fast paced world.
 
@@ -28,5 +30,21 @@ box-background-color: burlywood
 
 PROJECT
 Background-color: Moccasin
+
+Porfolio
+Like----https://alkavadlo.com/
+I like the graphics on this website.
+
+Like--http://stevenkinnear.com/
+I like this website because it simple but efficient
+
+Like--https://redlight.dev/
+I love this portfollio because it is very interesting.
+what I dislike is I could never do it.
+I don't understand what is being done at the top of portfokio.
+
+Like--https://willfreeman.myportfolio.com/art-direction
+I like the home page because of the button "Who am I"
+
 
 
