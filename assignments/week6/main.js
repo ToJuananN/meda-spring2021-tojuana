@@ -143,16 +143,218 @@ if(true) {
     console.log("Everything worked well");
 }
 
-var numberToTest = 0;
+var numberToTest = -4;
 
-if(numberToTest < 0) {
+if(numberToTest > 0) {
     console.log("This number is positive.");
+} else {
+    console.log("The number is NOT positive.");
 }
 
 if (numberToTest == 0) {
     console.log("This number is zero.");
+} else {
+    console.log("The number is NOT a zero.")
 }
 
-if (numberToTest > 0 ) {
+if (numberToTest < 0 ) {
     console.log("This number is negitive.");
+} else {
+    console.log("The number is NOT negative.")
 }
+
+
+var personAge;
+
+personAge = 40;
+
+var personLikesDrinking = true;
+
+
+if (personAge >= 21 && personAge <= 25) {
+    console.log("Congratz! You are of drinking age!");
+
+    if (personLikesDrinking == true) {
+        console.log("What alcholic drink do you like?");
+    }
+
+} else if (personAge >= 26 && personAge <= 40) {
+    console.log("Do you want to go grab a beer?");
+} else {
+    console.log("Have you tried video games?");
+}
+
+
+// While Loop, CHECK FIRST if condition is true, if true THEN run code block.
+var continueRunning = 0;
+
+while (continueRunning < 10) {
+
+    console.log("We ran the loop once!");
+
+    continueRunning = continueRunning + 1;
+
+    var count = 0
+
+    // while (count < 10) {
+    //     console.log("inner loop ran!");
+    //     count = count + 1;
+
+    // }
+}
+
+var personAnswer = "no";
+
+// Do While Loop, runs code block FIRST, then checks the condition.
+do {
+    console.log("Ran one loop!");
+
+    // alert("Congratulations you are the millionth visitor! Collect your prize free iPod.");
+
+    personAnswer = prompt("Continue the loop?");
+} while (personAnswer == "yes");
+
+
+// For loop, "condition" area has THREE parts
+// syntax: for (counter; condition; iterator) {}
+
+for (var keepRunning = 0; keepRunning < 10; keepRunning = keepRunning + 2) {
+    console.log("This for loop ran once!");
+}
+
+
+for (var i = 0; i < 10; i++) {
+
+
+    // if (valueAlreadyFound == true) {
+    //     // If the program ever hits this keyword, it will end the loop completely.
+    //     break;
+    // }
+
+
+    // if (color == "red") {
+    //     // if the program hits this keyword, it will end this specific iteration.
+    //     continue;
+    // }
+
+    console.log("the color is blue");
+
+
+}
+
+
+// double plus, adds a 1 to the variable.
+// double minus, removes a 1 from the variable.
+// i++ is the same as i = i + 1
+
+// .forEach(); A function for an array that go through each element of the array and does something with it.
+
+var someArray = [10, 30, 40, 50];
+
+someArray.forEach(function(arrayValue) {
+    console.log(arrayValue + 100);
+});
+
+
+// function
+
+function myFirstFunction() {
+    console.log("Hello from first function!")
+}
+
+myFirstFunction();
+myFirstFunction();
+myFirstFunction();
+
+// Parmeter(fancy name for Varable that belong to a functions) and Arguments(fancy name for the Value of a function)
+// Paramenter are written within the parenthesis of the DEFINITION
+
+function addTwoNumbers(firstNumber, secondNumber) {
+    var total = firstNumber + secondNumber;
+
+    console.log(total);
+}
+// Arguments are written within the parenthesis of the CALL
+addTwoNumbers(10, 1);
+addTwoNumbers(100, 2);
+addTwoNumbers(-5,4);
+
+
+
+// Returning values from 
+
+// Concatenation (Fancy word for): combining two strings
+
+function makeExciting(sentence) {
+    var excitingSentence = sentence + "!!!";
+
+    console.log(excitingSentence);
+
+    return excitingSentence;
+}
+
+var savedSentence = makeExciting("How are you doing");
+var savedSentence2 = makeExciting("Would you like some cake");
+
+console.log(savedSentence);
+
+// Example Function, 
+
+function mathSummarizer(num1, num2) {
+
+    var sum = num1 + num2;
+    var difference = num1 - num2;
+    var differenceReversed = num2 - num1;
+    var quotient = num1 / num2;
+    var quotientReversed = num2 / num1;
+    var product = num1 * num2
+
+    /*return [sum, difference, differenceReversed, quotient, quotientReversed, product];*/
+
+    var object = {
+        sum: sum,
+        difference: difference,
+        differenceReversed: differenceReversed,
+        quotient: quotient,
+        quotientReversed: quotientReversed,
+        product:product
+    };
+    return object;
+}
+
+
+function mathForMe(num1, num2) {
+    var number1 = num1;
+    var number2 = num2;
+    var results = mathSummarizer(number1, number2);
+    console.log(results);
+
+    for (var keyName in results) {
+    console.log("The " + keyName + " of  " + number1 + " and " + number2 + " is " + results[keyName]);
+
+    }
+    console.log(" ")
+}
+
+mathForMe(50, 100);
+
+mathForMe(10, 20);
+
+mathForMe(54, 254);
+
+mathForMe(23,320);
+
+/*var number1 = 9;
+var number2 = 15;
+
+var results = mathSummarizer(number1, number2);
+
+console.log(results);
+
+var sumSentence = "the sum of 9 and 15 is " + results["sum"];
+
+console.log(sumSentence);
+
+for (var keyName in results) {
+ console.log("The " + keyName + " of  " + number1 + " and " + number2 + " is " + results[keyName]);
+};*/

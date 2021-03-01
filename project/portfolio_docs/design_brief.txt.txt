@@ -32,19 +32,35 @@ PROJECT
 Background-color: Moccasin
 
 Porfolio
-Like----https://alkavadlo.com/
-I like the graphics on this website.
+Like----https://www.mynusthedesigner.com/
+1. I like the graphics on this website.
+2. I like how clean it is.
+3. I like the different mems that were used.
+Dislike----
+1. How busy the site was
+2. Too many pages
+3. Too many colors
+
+
 
 Like--http://stevenkinnear.com/
-I like this website because it simple but efficient
+1. I like this website because it simple but efficient
+2. I like that the tweets were included
+3. I like that all the pages were easy to follow
+
+Dislike--
+1. The website was plain
+2. I didn't like the resume
+3. I didn't like that it was outdated.
 
 Like--https://redlight.dev/
 I love this portfollio because it is very interesting.
-what I dislike is I could never do it.
-I don't understand what is being done at the top of portfokio.
+2. I like the color pattern
+3. I like way the circle follows the pointer
 
-Like--https://willfreeman.myportfolio.com/art-direction
-I like the home page because of the button "Who am I"
+1. I dislike is I could never do it.
+2. I don't understand what is being done at the top of portfokio.
+3. I don't like that the website contains cookies
 
 
 
