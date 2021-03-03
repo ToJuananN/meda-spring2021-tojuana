@@ -1,5 +1,7 @@
 // jQuery(); The .ready() function is deprecated, you can use $(function () {}); instead.
 
+var creditCard = 12344722;
+
 $(document).ready(function() {
     /*
     jQuery Common Functions
@@ -49,9 +51,17 @@ $(document).ready(function() {
         
         // Get value from input.
         var submittedData = $("#user-information").val();
+
+        if (submittedData === "") {
+            $("#resultsParagraph").text("You did not type anything in!")
+        } else {
         
         //parseInt(); tries to convert the value provided into a Number data type.
         var convertedData = parseInt(submittedData);
+
+        if (isNaN(convertedData)) {
+            $("#resultsParagraph").text("Sorry but that input is invalid, please type number's only.");
+        } else {
         
 
         // Multiply the value by 10;
@@ -60,6 +70,8 @@ $(document).ready(function() {
     
         // Write a sentence with the results into our paragraph element.
         $("#resultsParagraph").text("We multiplied your number by ten and got: " + mathStuff);
+        }
+      }
     });
 
  
