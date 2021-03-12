@@ -38,6 +38,8 @@ body {
   border-radius: 5px;
   
   
+  
+  
  }
  /*This is how you make a button(style the anchor)*/
  #container header nav ul li a {
@@ -50,13 +52,21 @@ body {
     color: black;
     text-decoration: none; /*no line under text*/
  }
+
+ header div {
+     float: right;
+ }
 header {
     height: 200px;
     background-color: burlywood;
    }
+
+
   
- header img {
-     float: left;
+ #home div {
+    
+    text-align: center;
+    
  }  
 
 main {
@@ -64,8 +74,14 @@ main {
     padding: 20px;
     vertical-align: middle;
 }
-#home p, #home h1 {
+
+#home h1 {
+    text-align: center;
+    color: black;
+}
+#home p {
    color: black;
+   float: center;
 }
 #about p {
     color: fuchsia;

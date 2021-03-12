@@ -15,7 +15,6 @@
             background-color: violet;
             border-radius: 50px;
         }
-
     </style>
 
     <script src="jquery-3.5.1.min.js"></script>
@@ -41,9 +40,9 @@
 
         }
             function randomCSSColor() {
-                var myColor = random0to255;
-                var myColor2 = random0to255;
-                var myColor3 = random0to255;
+                var myColor = random0to255();
+                var myColor2 = random0to255();
+                var myColor3 = random0to255();
 
 
                 var cssRandomColor = "rgb(" + myColor + ", " + myColor2 + ", " + myColor3 + ")";
@@ -70,68 +69,68 @@
 
         $(document).ready(function () {
 
-    // cool pink rgb(248, 27, 139)
+// cool pink rgb(248, 27, 139)
 
-    var myBox = $("#firstBox");
+var myBox = $("#firstBox");
 
 
-    myBox.hover(function () {
+myBox.hover(function () {
+    myBox.css("background-color", randomCSSColor());
+});
+
+jQuery("body").keypress(function (event) {
+
+    var key = event.which;
+    
+    // UP
+    if (key === 119) {
+
         myBox.css("background-color", randomCSSColor());
-    });
+        $("body").css("background-color", randomCSSColor());
+        var currentMarginTop = myBox.css("margin-top");
 
-    jQuery("body").keypress(function (event) {
+        if (currentMarginTop != "0px") {
+            myBox.css("margin-top", "-=20px");
+        }
 
-        var key = event.which;
-        
-        // up "W"
-        if (key === 119) {
+    // LEFT
+    } else if (key === 97) {
 
-            myBox.css("background-color", randomCSSColor());
-            $("body").css("background-color", randomCSSColor());
-            var currentMarginTop = myBox.css("margin-top");
+        myBox.css("background-color", randomCSSColor());
+        $("body").css("background-color", randomCSSColor());
 
-            if (currentMarginTop != "0px") {
-                myBox.css("margin-top", "-=20px");
-            }
+        var currentMarginLeft = myBox.css("margin-left");
 
-        // left "A"
-        } else if (key === 97) {
+        if (currentMarginLeft != "0px") {
+            myBox.css("margin-left", "-=20px");
+        }
 
-            myBox.css("background-color", randomCSSColor());
-            $("body").css("background-color", randomCSSColor());
+    // DOWN
+    } else if (key === 115) {
 
-            var currentMarginLeft = myBox.css("margin-left");
+        myBox.css("background-color", randomCSSColor());
+        $("body").css("background-color", randomCSSColor());
 
-            if (currentMarginLeft != "0px") {
-                myBox.css("margin-left", "-=20px");
-            }
+        // "ONE LINER"
+        //$("#firstBox").css("margin-top", (parseInt($("#firstBox").css("margin-top")) + 10) + "px");
 
-        // down "S"
-        } else if (key === 115) {
+        // MULTI LINER
+        // var currentMarginTop = $("#firstBox").css("margin-top");
+        // currentMarginTop = parseInt(currentMarginTop);
+        // var newMargin = (currentMarginTop + 10) + "px";
+        // $("#firstBox").css("margin-top", newMargin);
 
-            myBox.css("background-color", randomCSSColor());
-            $("body").css("background-color", randomCSSColor());
+        myBox.css("margin-top", "+=20px");
 
-            // "one line"
-            //$("#firstBox").css("margin-top", (parseInt($("#firstBox").css("margin-top")) + 10) + "px");
+    // RIGHT
+    } else if (key === 100) {
 
-            // Multiline
-            // var currentMarginTop = $("#firstBox").css("margin-top");
-            // currentMarginTop = parseInt(currentMarginTop);
-            // var newMargin = (currentMarginTop + 10) + "px";
-            // $("#firstBox").css("margin-top", newMargin);
+        myBox.css("background-color", randomCSSColor());
+        $("body").css("background-color", randomCSSColor());
 
-                    myBox.css("margin-top", "+=20px");
+        myBox.css("margin-left", "+=20px");
 
-                // right "D"
-                } else if (key === 100) {
-
-                    myBox.css("background-color", randomCSSColor());
-                    $("body").css("background-color", randomCSSColor());
-
-                    myBox.css("margin-left", "+=20px");
-
-             }
+    }
 
             });
 
