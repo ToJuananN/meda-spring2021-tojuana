@@ -29,56 +29,113 @@
 
 
     <script>
-        $(document).ready(function () {
 
-            var myBox = $("#firstBox");
+        function random0to255() {
 
-        $("body").keypress(function () {
+            var randomNumber = Math.random() * 256;
 
-            var key = event.which;
+            randomNumber = Math.floor(randomNumber);
+            //console.log(randomNumber)
 
-            // Up "W"
-            if(key === 119) {
+            return randomNumber;
+
+        }
+            function randomCSSColor() {
+                var myColor = random0to255;
+                var myColor2 = random0to255;
+                var myColor3 = random0to255;
 
 
-                var currentMarginTop = myBox.css("margin-top");
+                var cssRandomColor = "rgb(" + myColor + ", " + myColor2 + ", " + myColor3 + ")";
 
-                if(currentMarginTop == "0px") {
-                } else {
-                    myBox.css("margin-top", "-=20px");
-                }
+                 console.log(cssRandomColor);
 
-                
-                
-                // Left
-            } else if(key === 97) {
-                var currentMarginTop = myBox.css("margin-left");
-                if(currentMarginTop == "0px") {
+                 return cssRandomColor;
 
-                } else {
-                    myBox.css("margin-left", "-=20px");
-                }
-
-                
-                // Down "S"
-            } else if (key === 115) {
-                myBox.css("margin-top", "+=20px");
-
-               /* currentMarginTop = parseInt(currentMarginTop);
-                var newMargin = (currentMarginTop + 10) + "px";
-                $("#firstBox").css("margin-top", newMargin);
-                console.log("Move down!");
-                */
-               // Right "D"
-            } else if(key === 100) {
-
-                    myBox.css("margin-left", "+=20px");
-            
-                
             }
 
-        });
-  });
+
+
+        // Random number generator  for 1 to 10
+        // make a random nimber between 0 and .9
+        //var randomNumber = Math.random();
+
+        //var randomNumber1to10 = randomNumber * 10;
+        // Math.floor() will round DOWN, Math.ciel() will round UP, Math.round() will round based on the decimal
+
+       // randomNumber1to10 = Math.floor(randomNumber1to10);
+        //console.log(randomNumber1to10);
+
+        // end of random number generator for 1 to 10
+
+        $(document).ready(function () {
+
+    // cool pink rgb(248, 27, 139)
+
+    var myBox = $("#firstBox");
+
+
+    myBox.hover(function () {
+        myBox.css("background-color", randomCSSColor());
+    });
+
+    jQuery("body").keypress(function (event) {
+
+        var key = event.which;
+        
+        // up "W"
+        if (key === 119) {
+
+            myBox.css("background-color", randomCSSColor());
+            $("body").css("background-color", randomCSSColor());
+            var currentMarginTop = myBox.css("margin-top");
+
+            if (currentMarginTop != "0px") {
+                myBox.css("margin-top", "-=20px");
+            }
+
+        // left "A"
+        } else if (key === 97) {
+
+            myBox.css("background-color", randomCSSColor());
+            $("body").css("background-color", randomCSSColor());
+
+            var currentMarginLeft = myBox.css("margin-left");
+
+            if (currentMarginLeft != "0px") {
+                myBox.css("margin-left", "-=20px");
+            }
+
+        // down "S"
+        } else if (key === 115) {
+
+            myBox.css("background-color", randomCSSColor());
+            $("body").css("background-color", randomCSSColor());
+
+            // "one line"
+            //$("#firstBox").css("margin-top", (parseInt($("#firstBox").css("margin-top")) + 10) + "px");
+
+            // Multiline
+            // var currentMarginTop = $("#firstBox").css("margin-top");
+            // currentMarginTop = parseInt(currentMarginTop);
+            // var newMargin = (currentMarginTop + 10) + "px";
+            // $("#firstBox").css("margin-top", newMargin);
+
+                    myBox.css("margin-top", "+=20px");
+
+                // right "D"
+                } else if (key === 100) {
+
+                    myBox.css("background-color", randomCSSColor());
+                    $("body").css("background-color", randomCSSColor());
+
+                    myBox.css("margin-left", "+=20px");
+
+             }
+
+            });
+
+      });
 
     </script>
 </body>

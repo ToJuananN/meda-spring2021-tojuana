@@ -39,11 +39,13 @@
     <div id="container">
 
         <h1>Budget Calculator</h1>
+        <p>Disclaimer: This calculator has inacurate tax rates!</p>
 
-        <div input="inputs">
+        <div id="inputs">
             <div>
 
                 <h2>Monthly Expenses</h2>
+            
                 <form>
 
                     <label for="food">Food</label>
@@ -110,7 +112,13 @@
 
     <script>
 
+
+        //employee total 21%
+        // contract total 36.3%
+
         $(document).ready(function () {
+            
+            
             $("#submit").click(function () {
                 
                 // Expenses Start
@@ -166,12 +174,31 @@
 
                 // Income end
 
-                //
+
+                // Taxes START
+                
+                var emplyeeTaxRate = .21;
+                var contractorTaxRate = .363;
+                
+                var employeeTaxAmount = dayJob * employeeTaxAmount;
+                var contractorTaxRate = gig * contractorTaxRate;
+                var taxTotal = employeeTaxAmount + contractorTaxAmount;
+
+                difference = difference - taxTotal;
+                
+
+                // Taxes END
+
+                // Results START
+
+
                 if (difference > 0) {
-                    $("#monthly").text("Congraz you ha an extra $" + difference + " dollars for this month!");
+                    $("#monthly").text("Congraz you have an extra $" + difference + " dollars for this month! You have to put away $ " + taxTotal + " for tax man.");
                 } else if (difference < 0) {
-                    $("#monthly").text("Looks like you will need to you cardit card to cover the $" + Math.abs(difference) + " expenses for the month.");
-                } else if (isNaN(difference)) {
+                    $("#monthly").text("Looks like you will need to you card it card to cover the $" + Math.abs(difference) + " expenses for the month...u Keep in mind, based on your income you also need to think abour making up $ This also includes $ " + taxTotal + "for the tax man.");
+                } else if (difference == 0) {
+                    $("#monthly").text("You have exactly the same amout of expense as income! Close one. Your not off the hook yet though, make sure to figure out how to save " + taxTotal + " for the tax man.");
+                }else if (isNaN(difference)) {
                     $("#monthly").text("One of your inputs does not have a number in it. Please use 0 instead. Thank you!");
                 }
                                
